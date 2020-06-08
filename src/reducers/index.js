@@ -26,7 +26,8 @@ export const Reducer = (state = initialState, action) => {
 					...state.car,
 					features: state.car.features.includes(action.payload)
 						? [...state.car.features]
-						: [...state.car.features, action.payload]
+                        : [...state.car.features, action.payload],
+                    price: state.car.price + action.payload.price
 				}
 			}
 		case REMOVE:
